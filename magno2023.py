@@ -4,7 +4,7 @@ import pandas as pd
 import joblib 
 import streamlit as st
 
-reg = joblib.load('magn1234.pkl')
+reg = joblib.load('magn2023.pkl')
 
 def predict_mag_Earthquake(latitude,longitude,rms,magType,locationSource,magSource):
     prediction = reg.predict(pd.DataFrame({'latitude':[latitude],'longitude':[longitude],'rms':[rms],'magType':[magType],'locationSource':[locationSource],'magSource':[magSource]}))
